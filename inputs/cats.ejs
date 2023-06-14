@@ -1,0 +1,18 @@
+---
+layout: main.ejs
+pagination:
+    data: cats
+    size: 1
+    alias: cat
+permalink: "cats/<%= cat.name %>/"
+skipFooter: true
+catStyling: true
+---
+
+<h1><%= cat.header %></h1>
+<div class="img-container">
+	<img src="<%= '/img/'+cat.img %>" alt="<%= cat.name %>">
+</div>
+<% for(p of cat.descr) { %>
+		<p><%= p %></p>
+<% }%>

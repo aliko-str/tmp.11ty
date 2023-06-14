@@ -1,0 +1,23 @@
+---
+title: One Man and His Cats
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+		<link rel="stylesheet" href="/css/shared.css">
+		<% if(locals.catStyling) { %>
+				<link rel="stylesheet" href="/css/cats.css">
+		<% } %>
+  </head>
+  <body>
+		<%- include('header.ejs') %>
+    <%- content %>
+		<% if(!locals.skipFooter) { %>
+			<%- include('footer.ejs') %>
+		<% } %>
+  </body>
+</html>

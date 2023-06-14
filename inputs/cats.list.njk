@@ -1,0 +1,10 @@
+---
+layout: main.ejs
+h1: All my cats are listed below
+---
+<h1>{{ h1 }}</h1>
+{% for cat in cats  %}
+	<h2><a href="{{ '/cats/' + cat.name + '/' }}">{{ cat.header }}</a></h2>
+	<p>{{ cat.descr.join(" ") | clipIt(99) | dotIt }}</p>
+	<hr>
+{% endfor %}

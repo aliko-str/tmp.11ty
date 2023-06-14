@@ -1,0 +1,1 @@
+This is a sample project for the class on static website generators, using 11ty.
